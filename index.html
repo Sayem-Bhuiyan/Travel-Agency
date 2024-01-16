@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/Group 40071 (2).png" type="image/x-icon">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/f6e4edba18.js" crossorigin="anonymous"></script>
+    <!-- stylse -->
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Travel Agency</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="nav-icon">
+                    <img src="Images/Group 40071 (2).png" alt="">
+                    <h2 class="nav-title">
+                        Travel <span>Agency</span>
+                    </h2>
+                </div>
+                <ul class="nav-menu menu-bar">
+                    <li><a class="hide-menu" href="#">Home</a></li>
+                    <li><a class="hide-menu" href="#">Packages</a></li>
+                    <li><a class="hide-menu" href="#">Testmonial</a></li>
+                    <li><a class="hide-menu" href="#">Blog</a></li>
+                    <li><a class="hide-menu" href="#">Contact</a></li>
+                    <li class="side-button" onclick="showSidebar()"><a href="#" ><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </div>
+            <ul class="nav-menu sidebar">
+                <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+                <li id="sidebar-logo"><img src="Images/Group 40071 (2).png" alt="" ></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Testmonial</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+    <script src="navbar.js"></script>
+</body>
+
+</html>
