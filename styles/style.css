@@ -3,110 +3,650 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
+body{
     font-family: 'Mulish', sans-serif;
-    min-height: 100vh;
 }
-header, main {
-    margin: 0 135px;
-}
-
 .navbar {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 52px;
 }
+header, main {
+    margin: auto 130px;
+}
+
 .nav-icon {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 16px;
 }
 .nav-title {
     color: #131318;
-    font-size: 36px; 
+    font-size: 36px;
     font-weight: 800;
 }
 .nav-title > span {
     color: #FF5400;
 }
-.nav-menu li {
+
+/* nav menu */
+.nav-menu li{
     display: inline;
+    
+}
+.nav-menu li {
+    color: #FF5400;
+    font-size: 18px;
+    font-weight: 700;
     margin-left: 44px;
 }
 .nav-menu li a {
-    color: #424247;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
     text-decoration: none;
+    color: #424247;
     transition: all 0.3s 0.1s ease-in-out;
 }
-.nav-menu li a:hover {
+.nav-menu li:hover a {
     color: #FF5400;
 }
+.nav-menu .side-button {
+    display: none;
+}
+
+/* side bar styles */
 .sidebar {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
     width: 250px;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.205);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
     display: none;
     flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
     justify-content: flex-start;
-    padding-top: 50px;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 30px;
+    background-color: rgba(255, 255, 255, 0.605);
+    backdrop-filter: blur(10px);
 }
-.sidebar li {
+header {
+    margin-bottom: 40px;
+}
+
+/* banner section */
+.banner-section > .banner-bg {
+    background-image:linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url('../Images/Group\ 13\ \(1\)\ \(1\).png');
+    height: 500px;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+}   
+.banner-section {
+    margin-bottom: 100px;
 }
-.sidebar a {
+.banner-section .banner-container {
+    text-align: center;
+    padding: 106px 60px 0;
+    
+}
+.banner-title {
+    color: white;
+    font-size: 64px;
+    font-weight:  800;
+    margin-bottom: 24px;
+}
+.banner-description {
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 48px;
+    padding: auto;
+}
+.banner-container .banner-inputs {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: max-content;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.30);
+    border-radius: 5px;
+}
+.banner-container .banner-inputs input{
+    font-size: 16px;
+    color: rgba(19, 19, 19, 0.50);
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+}
+.select-input {
+    font-size: 16px;
+    color: rgba(19, 19, 19, 0.50);
+    padding: 16px 16px;
+    border-radius: 8px;
+    border: none;
+    width: 150px;
+}
+
+.banner-container .banner-inputs > button {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #FF5400;;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 34px;
+}
+
+/* popular tour section */
+
+.popular-tour {
+    display: flex;
+    gap: 53px;
+    justify-content: space-between;
+    align-items: center;
+}
+.popular-tour-title {
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+.popular-tour-description {
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+.tour-content ul li {
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+    margin-left: 18px;
+}
+.btn-primary {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #FF5400;;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 34px;
+}
+.popular-tour {
+    margin-bottom: 100px;
+}
+/* Destination section styles */
+.destination-section {
+    margin-bottom: 100px;
+}
+.select-destination {
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+.destination-description {
+    font-size: 16px;
+    color: rgba(19, 19, 24, 0.70);
+    line-height: 26px;
+    margin-bottom: 48px;
+    padding: 0 50px;
+}
+.destination-content {
+    text-align: center;
+}
+.row-1 {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.maldives {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20)100%), url('../Images/Rectangle\ 5.png');
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    width: calc(50% - (24px/2));
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Indonesia {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20)100%), url('../Images/Rectangle\ 8.png');
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: calc(50% - (24px/2));
+    background-size: cover;
+    border-radius: 16px;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-2 {
+   display: flex;
+   gap: 24px;
+   margin-bottom: 24px;
+}
+.row-2 > .srilanka {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20)100%), url('../Images/Rectangle\ 6.png');
+    width: 40%;
+}
+.row-2 > .north-america {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20)100%), url('../Images/Rectangle\ 7.png');
+    width: 54%;
+}
+.row-2 >.kasmir {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20)100%), url('../Images/Rectangle\ 9.png');
+    width: 25%;
+}
+.srilanka, .north-america, .kasmir {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-3 {
+    display: flex;
+    gap: 24px;
+}
+.row-3 > .bangladesh {
+    width: 40%;
+}
+.row-3 > .bandorban {
+    width: 68%;
+}
+.bangladesh {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24,0.20)100%), url('../Images/Rectangle\ 11.png');
+}
+.bandorban {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24,0.20)100%), url('../Images/Rectangle\ 10.png');
+}
+.bangladesh, .bandorban {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Why choose section */
+.why-choose-section {
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-content: center;
+}
+.box {
+    padding: 32px;
+    border-radius: 16px;
+    width: calc(50% - (24px / 2))
+}
+.box-1 {
+    background-color: rgba(251, 181, 99, 0.05);
+    border: 1px solid rgba(251, 181, 99, 0.20)
+}
+.box-2 {
+    background-color: rgba(41, 206, 246, 0.20);
+    border: 1px solid rgba(41, 206, 246, 0.05);
+    
+}
+.box-3 {
+    background-color: rgba(233, 68, 68, 0.05);
+    border: 1px solid rgba(233, 68, 68, 0.20);
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+}
+.why-choose-section >:last-child{
+    justify-self: center;
+    align-self: center;
+}
+.box-img {
+    margin-bottom: 32px;
+}
+.box-title {
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.box-description {
+    color: #5A5A5D;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/* newsletter section */
+.newsletter-title {
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+
+}
+.newsletter-description {
+    color: #5A5A5D;
+    font-size: 16px;
+    line-height: 26px;
+}
+.newsletter-section {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.newsletter-box {
+    border: 1px solid #FF5400;
+    padding: 40px;
+    border-radius: 16px;
+}
+.news-horizontal {
+    margin: 24px 40px;
+}
+.newsletter-inputs input{
+    padding: 16px 20px;
+    width: 100%;
+    margin-bottom: 16px;
+    color: rgba(19, 19, 24, 0.30);
+    font-size: 16px; 
+    background-color: rgba(19, 19, 24, 0.05);
+    border-radius: 8px;
+    border: none;
+}
+.newsletter-inputs > button {
     width: 100%;
 }
 
-.side-button, .side-button > a {
-    display: none;
+.cuppon-link {
+    color: white;
+    font-size: 15.853px;
+    margin-bottom: 2.46px;
 }
-.side-button a > i {
-    width: 20px;
+.cuppon-title {
+    color: white;
+    font-size: 21.138px;
+    font-weight: 800;
 }
-.menu-bar li:last-child{
-    margin-left: 0;
+.cuppon{
+    padding: 24px 30px;
+    position: absolute;
+    background-color: #FF5400;
+    border-radius: 16px;
+    text-align: center;
+    transform: rotate(-19.628deg);
+    margin-top: -130px;
+    right: 135px;
 }
 
-@media Screen and (max-width: 572px) {
-    header, main {
+
+/* footer section styles */
+footer{
+    background-color: rgba(19, 19, 24, 0.05);
+    height: 502px;
+    width: 100%;
+
+}
+.footer-content {
+    text-align: center;
+    padding-top: 110px;
+    margin: 0 auto;
+}
+.footer-icon {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-title {
+    color: #131318;
+    font-size: 32px; 
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.footer-title span {
+    color: #FF5400;
+}
+.footer-description {
+    color: #5A5A5D;
+    font-size: 16px; 
+    line-height: 26px;
+    margin-bottom: 33px;
+    padding: 0 200px;
+}
+.icon-container  {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.icon-container i {
+    font-size: 24px;
+}
+.horizontal-line {
+    color: rgba(19, 19, 24, 0.10);
+    height: 1px;
+    margin: 50px 190px;
+}
+.copy-right {
+    color: #131318;
+    font-size: 16px; 
+    font-weight: 300;
+}
+
+
+
+
+/* responsive media query */
+@media(max-width: 600px) {
+    body {
         width: 100%;
+    }
+    header , main {
         margin: auto 20px;
     }
-    .navbar {
-        margin-top: 20px;
+    ul  .hide-menu {
+        display: none;
     }
-    .nav-icon {
-        gap: 10px;
+    .nav-menu .side-button {
+        display: block;
+    }
+    .navbar {
+        margin-top: 0;
     }
     .nav-icon > img {
         width: 28.724px;
         height: 33.516px;
+    
     }
-    .nav-title {
+    .nav-icon > .nav-title {
+        font-size: 21.543px;
+    }
+    header {
+        margin-bottom: 17px;
+        margin-top: 20px;
+    }
+
+    /* Banner section */
+    .banner-section {
+        margin-bottom: 24px;
+    }
+    .banner-title {
         font-size: 22px;
-        display: inline;
+        margin-bottom: 8px;
+    }
+    .banner-description {
+        width: 100%;
+        font-size: 14px; 
+        margin-bottom: 32px;
+    }
+    .banner-inputs {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .banner-container .banner-inputs {
+        width: 80%;
+    }
+    .banner-section
+    .banner-container {
+        padding: 32px 16px;
+    }
+    .banner-section .banner-bg {
+        height: auto;
+        width: auto;
+    }
+    .banner-inputs .select-input {
+        width: 100%;
+    }
+    .banner-inputs > button {
+        width: 100%;
+    }
+
+    /* Popular section media */
+    .popular-tour {
+        flex-direction:  column;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+    .popular-tour-img {
+        height: auto;
+        width: 100%;
+    }
+    .popular-tour-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .popular-tour-description {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .tour-content ul li {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    /* destination section */
+    .select-destination {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .destination-description {
+        font-size: 14px;
+        margin-bottom: 16px;
+        padding: 0 20px;
 
     }
-    .hide-menu  {
-        display: none;
-        position: absolute;
+    .row-1, .row-2, .row-3 {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
     }
-    
-    .side-button > a {
-        display: block;
-        width: 30px;
-        margin-right: 0;
+    .row1 div {
+        width: 100%;
+    }
+    .destination-section .maldives, .Indonesia {
+        background-size: cover;
+        width: 100%;
+    }
+    .row-2 .srilanka {
+        width: 100%;
+        background-size: cover;
+    }
+    .row-2 .north-america {
+        width: 100%;
+        background-size: cover;
+    }
+    .row-2 .kasmir {
+        width: 100%;
+        background-size: cover;
+    }
+    .row-3 .bangladesh {
+        width: 100%;
+        background-size: cover;
+    }
+    .row-3 .bandorban {
+        width: 100%;
+        background-size: cover;
+    }
+    .destination-section {
+        margin-bottom: 24px;
+    }
+    .maldives, .Indonesia, .srilanka, .north-america, .kasmir, .bangladesh, .bandorban {
+        height: 176px;
+    }
+
+    /* why choose us section */
+    .why-choose-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+    .box {
+        width: 100%;
+    }
+
+    /* footer section  */
+    footer {
+        height: 309px;
+    }
+    .footer-content {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .footer-icon > img {
+        height: 33.516px;
+        width: 28.724px;
+    }
+    .footer-title{
+        font-size: 21.543px;
+    }
+    .footer-description {
+        padding: 0 44px;
+        margin-bottom: 16px;
+    }
+    .horizontal-line {
+        margin: 24px 20px;
+    }
+
+    /* newsletter section */
+    .newsletter-section {
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .newsletter-section .newsletter-img {
+        height: auto;
+        width: 100%;
+    }
+    .cuppon {
+        right: 25px;
     }
 }
